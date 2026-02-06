@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Store Locator
- * Version: 1.1.9
+ * Version: 1.2.0
  * Plugin URI: https://locatestore.com/
  * Description: Create a store locator for your website in minutes. Add all the store locations in google sheets and embed map on your website. There is no coding involved here.
  * Author: Micro.company

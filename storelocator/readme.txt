@@ -2,8 +2,8 @@
 Contributors: Micro.company
 Tags: Store Locator, Google Maps, Business Locations, Store Finder, Maps, Map markers
 Requires at least: 4.5.0
-Tested up to: 6.8.2
-Stable tag: 1.1.9
+Tested up to: 6.9
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
  
@@ -264,8 +264,8 @@ You may add more columns in the Google sheet and specify these new columns under
 = 1.1.9 =
 * Support for WordPress 6.8.2
 
-= 1.1.9 =
-* Support for WordPress 6.8.2
+= 1.2.0 =
+* Support for WordPress 6.9
 
 == Upgrade Notice ==
 
@@ -308,3 +308,9 @@ You may add more columns in the Google sheet and specify these new columns under
 = 1.1.8 =
 * Support for WordPress 6.7.1
 * Fixed warning messages
+
+= 1.1.9 =
+* Support for WordPress 6.8.2
+
+= 1.2.0 =
+* Support for WordPress 6.9
