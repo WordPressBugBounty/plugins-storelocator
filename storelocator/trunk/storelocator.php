@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: Store Locator
- * Version: 1.1.8
+ * Version: 1.2.2
  * Plugin URI: https://locatestore.com/
  * Description: Create a store locator for your website in minutes. Add all the store locations in google sheets and embed map on your website. There is no coding involved here.
  * Author: Micro.company
@@ -297,7 +297,13 @@ function storelocator_submit_uninstall_reason_action()
 {
     global  $wp_version, $storelocator_active_plugin, $current_user;
 
-    wp_verify_nonce($_REQUEST['storelocator_ajax_nonce'], 'storelocator_ajax_nonce');
+    if (!isset($_REQUEST['storelocator_ajax_nonce']) || !wp_verify_nonce($_REQUEST['storelocator_ajax_nonce'], 'storelocator_ajax_nonce')) {
+        wp_die('Invalid request', 'Invalid request', array('response' => 403));
+    }
+
+    if (!current_user_can('manage_options')) {
+        wp_die('Unauthorized', 'Unauthorized', array('response' => 403));
+    }
 
     $reason_id = isset($_REQUEST['reason_id']) ? stripcslashes(sanitize_text_field($_REQUEST['reason_id'])) : '';
     $basename  = isset($_REQUEST['plugin']) ? stripcslashes(sanitize_text_field($_REQUEST['plugin'])) : '';
